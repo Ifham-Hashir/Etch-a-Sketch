@@ -24,3 +24,10 @@ body{
 .row {
   flex: 1;
 }
+
+button {
+  margin: 30px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+}
