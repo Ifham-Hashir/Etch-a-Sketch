@@ -6,8 +6,8 @@ setGridBtn.addEventListener("click", () => {
   removeGrids();
   n = parseInt(prompt("Enter value of rows or columns > 0 and < 100", "16"));
   while (n > 100 || n <= 0 || (isNaN(n))){
-    alert("Invalid input:");
-    n = parseInt(prompt("Enter value of row(s) or column(s) > 0 and < 100"));
+    alert("Invalid input");
+    n = parseInt(prompt("Enter value of rows or columns > 0 and < 100", "16"));
   }
   createSketch();
 
@@ -92,14 +92,4 @@ function createSketch() {
     }
   }
   createGrids(n);
-  
-
-  let bgColor = document.querySelectorAll(".row");
-  function changeBg(n) {
-    for (let i = 0; i < n*n; i++){
-      bgColor[i].addEventListener("mouseover", () => {
-        bgColor[i].style.background = randomColor();
-      });
-    }
-  }
 }
